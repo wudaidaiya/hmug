@@ -30,13 +30,14 @@
         <view class="floor-img-box">
           <!-- 左侧大图片的盒子 -->
           <view class="left-img-box">
-            <image class="left-img" :style="{width:item.product_list[0].image_width+'rpx'}"
-              :src="item.product_list[0].image_src"></image>
+            <image @click="goGoodslist(item.product_list[0].navigator_url)" class="left-img"
+              :style="{width:item.product_list[0].image_width+'rpx'}" :src="item.product_list[0].image_src"></image>
           </view>
           <!-- 右侧 4 个小图片的盒子 -->
           <view class="right-img-box">
             <view class="right-img-item" v-for="(item2,i2) in item.product_list" :key='i2' v-if=" i2 !== 0">
-              <image :src='item2.image_src' mode="widthFix" :style="{width: item2.image_width + 'rpx'}"></image>
+              <image @click="goGoodslist(item2.navigator_url)" :src='item2.image_src' mode="widthFix"
+                :style="{width: item2.image_width + 'rpx'}"></image>
             </view>
           </view>
         </view>
@@ -73,13 +74,20 @@
       // 加载导航列表数据
       async loadNavList() {
         const res = await getNavList()
-        console.log(res)
+        // console.log(res)
         this.navs = res.message
       },
       async getFloorList() {
         const res = await getFloorList()
-        console.log(res);
+        // console.log(res);
         this.floors = res.message
+      },
+      // 点击进入商品列表
+      goGoodslist(url) {
+        // console.log(url);
+        uni.navigateTo({
+          url: '/subpackage/goods-list/goods-list?' + url.split('?')[1]
+        })
       },
       // 去详细页
       goDetail(id) {
@@ -88,6 +96,7 @@
         })
       }
     },
+
     clickNav(item) {
       if (item.name === '分类') {
         uni.switchTab({

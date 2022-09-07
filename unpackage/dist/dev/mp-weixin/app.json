@@ -9,15 +9,17 @@
     {
       "root": "subpackage",
       "pages": [
-        "detail/detail"
+        "detail/detail",
+        "goods-list/goods-list"
       ]
     }
   ],
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "黑马优购",
-    "navigationBarBackgroundColor": "#c00000",
-    "backgroundColor": "#F8F8F8"
+    "navigationBarBackgroundColor": "#C00000",
+    "backgroundColor": "#FFFFFF",
+    "ignoreDevUnusedFiles": false
   },
   "tabBar": {
     "list": [
@@ -47,5 +49,7 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {
+    "van-card": "/wxcomponents/vant/card/index"
+  }
 }

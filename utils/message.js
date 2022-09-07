@@ -19,4 +19,10 @@ message.success = function(title) {
     duration: 1000
   })
 }
+message.loading = (title, duration) => {
+  uni.showToast({
+    title: '加载中...',
+    icon: 'loading'
+  })
+}
 export default message
