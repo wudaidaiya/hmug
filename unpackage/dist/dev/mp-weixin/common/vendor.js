@@ -2629,20 +2629,6 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 12:
-/*!********************************************************!*\
-  !*** C:/Users/16653/Desktop/小程序/hmug/filters/index.js ***!
-  \********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.toFixed = void 0;var toFixed = function toFixed(price) {
-  return Number(price).toFixed(2);
-};exports.toFixed = toFixed;
-
-/***/ }),
-
 /***/ 19:
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -3473,7 +3459,7 @@ if (hadRuntime) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.getFloorList = exports.getNavList = exports.getXXXAPI = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+Object.defineProperty(exports, "__esModule", { value: true });exports.getGoodsDetail = exports.getFloorList = exports.getNavList = exports.getXXXAPI = void 0;var _request = _interopRequireDefault(__webpack_require__(/*! @/utils/request.js */ 23));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var getXXXAPI = function getXXXAPI() {
   return _request.default.get('/home/swiperdata');
@@ -3490,6 +3476,9 @@ var getNavList = function getNavList() {
 var getFloorList = function getFloorList() {
   return _request.default.get('/home/floordata');
 };exports.getFloorList = getFloorList;
+
+var getGoodsDetail = function getGoodsDetail(id) {return _request.default.get('/goods/detail', {
+    goods_id: id });};exports.getGoodsDetail = getGoodsDetail;
 
 /***/ }),
 
@@ -10926,6 +10915,20 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.getGoodsLi
 
 // 获取商品列表
 var getGoodsList = function getGoodsList(data) {return _request.default.get('/goods/search', data);};exports.getGoodsList = getGoodsList;
+
+/***/ }),
+
+/***/ 59:
+/*!********************************************************!*\
+  !*** C:/Users/16653/Desktop/小程序/hmug/filters/index.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.toFixed = void 0;var toFixed = function toFixed(price) {
+  return Number(price).toFixed(2);
+};exports.toFixed = toFixed;
 
 /***/ })
 

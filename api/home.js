@@ -15,3 +15,7 @@ export const getNavList = () => {
 export const getFloorList = () => {
   return request.get('/home/floordata')
 }
+
+export const getGoodsDetail = (id) => request.get('/goods/detail', {
+  goods_id: id
+})
