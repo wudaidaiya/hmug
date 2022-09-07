@@ -1,6 +1,6 @@
 <template>
   <view>
-    我的
+    详情页
   </view>
 </template>
 
@@ -8,12 +8,15 @@
   export default {
     data() {
       return {
-        
-      };
+
+      }
+    },
+    methods: {
+
     }
   }
 </script>
 
-<style lang="scss">
+<style>
 
 </style>
